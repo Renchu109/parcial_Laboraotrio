@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
-public class Calculadra_RenzoDiLaudo {
+public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        //Declaracion de las variables de n鷐eros
+        //Declaracion de las variables de n煤meros
 
+        System.out.println("Ingrese un n煤mero: ");
         int number1 = input.nextInt();
-        System.out.println("Ingrese un n鷐ero: ");
 
+        System.out.println("Ingrese otro n煤mero: ");
         int number2 = input.nextInt();
-        System.out.println("Ingrese otro n鷐ero: ");
 
         //Creacion de las fnciones suma, resta, multiplicacion
 
@@ -31,30 +31,30 @@ public class Calculadra_RenzoDiLaudo {
             } else {
 
                 //Declaracion de la funcion divsion
-                int division = number1 / number2;
+                float division = (float) number1 / number2;
 
                 //Menu de operaciones
-                System.out.println("Elija la operaci髇 que desea realizar: ");
+                System.out.println("Elija la operaci贸n que desea realizar: ");
                 System.out.println("1.Suma");
                 System.out.println("2.Resta");
-                System.out.println("3.Multiplicaci髇");
-                System.out.println("4.Divisi髇");
+                System.out.println("3.Multiplicaci贸n");
+                System.out.println("4.Divisi贸n");
 
-                //Bucle para corregir errores de selecci髇
+                //Bucle para corregir errores de selecci贸n
                 int eleccion = input.nextInt();
                 if ((eleccion != 1) && (eleccion != 2) && (eleccion != 3) && (eleccion != 4)) {
                     while ((eleccion != 1) && (eleccion != 2) && (eleccion != 3) && (eleccion != 4)) {
-                        System.out.println("Debe presionar un n鷐ero para realizar la operaci髇 respectiva");
-                        System.out.println("Elija la operaci髇 que desea realizar: ");
+                        System.out.println("Debe presionar un n煤mero para realizar la operaci贸n respectiva");
+                        System.out.println("Elija la operaci贸n que desea realizar: ");
                         System.out.println("1.Suma");
                         System.out.println("2.Resta");
-                        System.out.println("3.Multiplicaci髇");
-                        System.out.println("4.Divisi髇");
+                        System.out.println("3.Multiplicaci贸n");
+                        System.out.println("4.Divisi贸n");
                         eleccion = input.nextInt();
                     }
                 }
 
-                //Salida de la operaci髇 seleccionada
+                //Salida de la operaci贸n seleccionada
 
                 if (eleccion == 1) {
                     System.out.println("Suma");
@@ -63,22 +63,23 @@ public class Calculadra_RenzoDiLaudo {
                     System.out.println("Resta");
                     System.out.println(number1 + " - " + number2 + " = " + resta);
                 } else if (eleccion == 3) {
-                    System.out.println("Multiplicaci髇");
+                    System.out.println("Multiplicaci贸n");
                     System.out.println(number1 + " * " + number2 + " = " + multiplicacion);
                 } else {
-                    System.out.println("Divisi髇");
+                    System.out.println("Divisi贸n");
                     System.out.println(number1 + " / " + number2 + " = " + division);
                 }
             }
 
 
             //Bucle para repetir el programa y evitar eleciones equivocadas
-            System.out.println("緿esea realizar otra operaci髇?");
+            System.out.println("驴Desea realizar otra operaci贸n?");
+            System.out.println("Ingrese 1 para si o 2 para no");
             int decision = input.nextInt();
             if ((decision != 1) && (decision != 2)){
                 while ((decision != 1) && (decision != 2)){
                     System.out.println("Ingrese 1 para si o 2 para no");
-                    System.out.println("緿esea realizar otra operaci髇?");
+                    System.out.println("驴Desea realizar otra operaci贸n?");
                     decision = input.nextInt();
                 }
             }
